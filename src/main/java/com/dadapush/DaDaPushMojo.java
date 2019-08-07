@@ -32,7 +32,7 @@ import org.apache.maven.plugins.annotations.Parameter;
 
 @SuppressWarnings("unused")
 @Mojo(name = "message")
-public class MessageMojo extends AbstractMojo {
+public class DaDaPushMojo extends AbstractMojo {
 
   @Parameter(property = "message.basePath", defaultValue = "https://www.dadapush.com")
   private URL basePath;
