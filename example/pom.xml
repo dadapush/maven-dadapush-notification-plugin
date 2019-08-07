@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.dadapush</groupId>
+  <artifactId>dadapush-maven-plugin-example</artifactId>
+  <version>1.0.0</version>
+
+<build>
+  <plugins>
+    <plugin>
+      <groupId>com.dadapush</groupId>
+      <artifactId>dadapush-maven-plugin</artifactId>
+      <version>${project.version}</version>
+      <executions>
+        <execution>
+          <id>message-compile</id>
+          <phase>compile</phase>
+          <goals>
+            <goal>message</goal>
+          </goals>
+          <configuration>
+            <basePath>https://www.dadapush.com</basePath>
+            <channelToken>YOUR_CHANNEL_TOKEN</channelToken>
+            <title>${project.name}</title>
+            <content>send compile notification from ${project.build.finalName}</content>
+            <failOnError>true</failOnError>
+          </configuration>
+        </execution>
+        <execution>
+          <id>message-package</id>
+          <phase>package</phase>
+          <goals>
+            <goal>message</goal>
+          </goals>
+          <configuration>
+            <basePath>https://www.dadapush.com</basePath>
+            <channelToken>YOUR_CHANNEL_TOKEN</channelToken>
+            <title>${project.name}</title>
+            <content>send package notification from ${project.build.finalName}</content>
+            <failOnError>true</failOnError>
+          </configuration>
+        </execution>
+        <execution>
+          <id>message-test</id>
+          <phase>test</phase>
+          <goals>
+            <goal>message</goal>
+          </goals>
+          <configuration>
+            <basePath>https://www.dadapush.com</basePath>
+            <channelToken>YOUR_CHANNEL_TOKEN</channelToken>
+            <title>${project.name}</title>
+            <content>send test notification from ${project.build.finalName}</content>
+            <failOnError>true</failOnError>
+          </configuration>
+        </execution>
+        <execution>
+          <id>message-install</id>
+          <phase>install</phase>
+          <goals>
+            <goal>message</goal>
+          </goals>
+          <configuration>
+            <basePath>https://www.dadapush.com</basePath>
+            <channelToken>YOUR_CHANNEL_TOKEN</channelToken>
+            <title>${project.name}</title>
+            <content>send install notification from ${project.build.finalName}</content>
+            <failOnError>true</failOnError>
+          </configuration>
+        </execution>
+      </executions>
+
+    </plugin>
+  </plugins>
+</build>
+</project>
