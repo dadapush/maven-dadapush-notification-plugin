@@ -24,6 +24,7 @@ import com.dadapush.client.model.MessagePushRequest;
 import com.dadapush.client.model.ResultOfMessagePushResponse;
 import java.net.URL;
 import java.util.Objects;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
@@ -58,8 +59,8 @@ public class MessageMojo extends AbstractMojo {
     apiClient.setBasePath(Objects.requireNonNull(basePath).toString());
     DaDaPushMessageApi apiInstance = new DaDaPushMessageApi(apiClient);
     MessagePushRequest body = new MessagePushRequest();
-    body.setTitle(title);
-    body.setContent(content);
+    body.setTitle(StringUtils.substring(title,0,50));
+    body.setContent(StringUtils.substring(content,0,500));
     body.setNeedPush(true);
     try {
       ResultOfMessagePushResponse result = apiInstance.createMessage(body, Objects.requireNonNull(channelToken));
