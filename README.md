@@ -16,7 +16,7 @@ optional configuration
 
 ```xml
   <plugin>
-    <groupId>com.dadapush</groupId>
+    <groupId>com.dadapush.client</groupId>
     <artifactId>dadapush-maven-plugin</artifactId>
     <version>${project.version}</version>
     <configuration>
@@ -33,7 +33,7 @@ or advanced usage
 
 ```xml
 <plugin>
-  <groupId>com.dadapush</groupId>
+  <groupId>com.dadapush.client</groupId>
   <artifactId>dadapush-maven-plugin</artifactId>
   <version>${project.version}</version>
   <executions>

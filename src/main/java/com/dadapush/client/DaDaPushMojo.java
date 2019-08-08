@@ -1,4 +1,4 @@
-package com.dadapush;
+package com.dadapush.client;
 
 /*
  * Copyright 2001-2005 The Apache Software Foundation.
@@ -16,9 +16,6 @@ package com.dadapush;
  * limitations under the License.
  */
 
-import com.dadapush.client.ApiClient;
-import com.dadapush.client.ApiException;
-import com.dadapush.client.Configuration;
 import com.dadapush.client.api.DaDaPushMessageApi;
 import com.dadapush.client.model.MessagePushRequest;
 import com.dadapush.client.model.ResultOfMessagePushResponse;

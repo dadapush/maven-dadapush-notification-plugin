@@ -2,7 +2,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.dadapush</groupId>
+  <groupId>com.dadapush.client</groupId>
   <artifactId>dadapush-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
   <version>1.0.0</version>
@@ -85,8 +85,8 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>com.dadapush</groupId>
+      <!--<plugin>
+        <groupId>com.dadapush.client</groupId>
         <artifactId>dadapush-maven-plugin</artifactId>
         <version>${project.version}</version>
         <configuration>
@@ -96,7 +96,7 @@
           <content>send test notification from ${project.build.finalName}</content>
           <failOnError>true</failOnError>
         </configuration>
-      </plugin>
+      </plugin>-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
